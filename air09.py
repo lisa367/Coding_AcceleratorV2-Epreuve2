@@ -18,9 +18,9 @@ if separator == 0:
     sys.exit()
 
 try:
-    for i in range(len(raw_input), separator):
+    for i in range(separator):
         list1.append(int(raw_input[i]))
-    for i in range(separator, len(raw_input)):
+    for i in range(separator+1, len(raw_input)):
         list2.append(int(raw_input[i]))
 
     if list1 != sorted(list1) or list2 != sorted(list2):
@@ -36,3 +36,6 @@ try:
 except ValueError:
     print("Error\nPlease enter two lists of sorted integers, separated by the word 'fusion'.")
     sys.exit()
+
+#print(list1, list2, sep='\n')
+#print(raw_input, separator, sep='\n')
